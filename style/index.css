@@ -248,7 +248,7 @@ body {
   color: var(--gray-950);
   background-color: var(--orange-500);
   border-radius: 22.5px;
-  transition: background-color 0.2s ease, transform 0.2s;
+  transition: background-color 0.2s ease, transform 0.2s, opacity 0.2s;
 }
 
 .submit-btn:focus-visible {
