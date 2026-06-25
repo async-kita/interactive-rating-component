@@ -13,6 +13,10 @@
     href="./images/favicon-32x32.png"
   >
   <title>Frontend Mentor | Interactive rating component</title>
+  <link
+    rel="stylesheet"
+    href="./style/index.css"
+  >
 </head>
 <body>
   <main class="content">
@@ -27,15 +31,8 @@
         class="star-wrapper"
         aria-hidden="true"
       >
-        <svg
-          width="17"
-          height="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="m9.067.43 1.99 4.031c.112.228.33.386.58.422l4.45.647a.772.772 0 0 1 .427 1.316l-3.22 3.138a.773.773 0 0 0-.222.683l.76 4.431a.772.772 0 0 1-1.12.813l-3.98-2.092a.773.773 0 0 0-.718 0l-3.98 2.092a.772.772 0 0 1-1.119-.813l.76-4.431a.77.77 0 0 0-.222-.683L.233 6.846A.772.772 0 0 1 .661 5.53l4.449-.647a.772.772 0 0 0 .58-.422L7.68.43a.774.774 0 0 1 1.387 0Z"
-            fill="#FC7614"
-          />
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.55573 0.358294L9.21395 3.71781C9.30762 3.90758 9.48868 4.0391 9.69811 4.06951L13.4055 4.60832C13.6477 4.6435 13.849 4.8132 13.9246 5.04603C14.0002 5.27886 13.937 5.53442 13.7617 5.70522L11.0786 8.32018C10.9268 8.46806 10.858 8.68089 10.8934 8.88921L11.5267 12.5818C11.568 12.823 11.4689 13.0667 11.2709 13.2106C11.0729 13.3544 10.8104 13.3734 10.5938 13.2595L7.27733 11.5157C7.08991 11.4174 6.86615 11.4174 6.67872 11.5157L3.36229 13.2595C3.14568 13.3734 2.8832 13.3544 2.6852 13.2106C2.4872 13.0667 2.38801 12.823 2.42934 12.5818L3.06267 8.88921C3.09846 8.68061 3.02919 8.46776 2.87749 8.32018L0.194382 5.70522C0.0190117 5.53442 -0.0441539 5.27886 0.0314549 5.04603C0.107064 4.8132 0.308327 4.6435 0.550587 4.60832L4.25795 4.06951C4.46738 4.0391 4.64843 3.90758 4.7421 3.71781L6.40032 0.358294C6.63822 -0.119431 7.31976 -0.119431 7.55573 0.358294Z" fill="#FC7614"/>
         </svg>
       </div>
       <h2
@@ -66,7 +63,7 @@
         <button
           class="rating-btn"
           type="button"
-          data-rating="1"
+          data-rating="2"
           aria-pressed="false"
           aria-label="Rate 2 out of 5"
         >
@@ -75,7 +72,7 @@
         <button
           class="rating-btn"
           type="button"
-          data-rating="1"
+          data-rating="3"
           aria-pressed="false"
           aria-label="Rate 3 out of 5"
         >
@@ -84,7 +81,7 @@
         <button
           class="rating-btn"
           type="button"
-          data-rating="1"
+          data-rating="4"
           aria-pressed="false"
           aria-label="Rate 4 out of 5"
         >
@@ -93,7 +90,7 @@
         <button
           class="rating-btn"
           type="button"
-          data-rating="1"
+          data-rating="5"
           aria-pressed="false"
           aria-label="Rate 5 out of 5"
         >
@@ -102,7 +99,7 @@
       </fieldset>
       <button
         class="submit-btn"
-        type="submit"
+        type="button"
         id="submitBtn"
         disabled
         aria-label="Submit your rating"
@@ -111,10 +108,10 @@
     </article>
     <article
       class="card thankyou-card"
-      id="thankYouCard"
-      hidden
+      id="thankyouCard"
       aria-labelledby="thankyouHeading"
       aria-describedby="thankyouDesc"
+      hidden
     >
       <img
         class="thankyou-image"

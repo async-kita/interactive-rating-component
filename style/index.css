@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Color */
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray-500: #969FAD;
+  --gray-900: #262E38;
+  --gray-950: #131518;
+  --orange-500: #FC7614;
+  --gradient: radial-gradient(100% 100% at 50% 0%, #232A34 0%, #181E27 100%);
+
+  /* Space */
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-1300: 104px;
+  --spacing-1700: 136px;
+
+  /* Fonts */
+  --font-family: "Overpass", sans-serif;
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --text-prest-1-size: 28px;
+  --text-prest-1-weight: var(--weight-bold);
+  --text-prest-1-line-height: 35px;
+  --text-prest-1-letter-spacing: 0px;
+
+  --text-prest-2-size: 24px;
+  --text-prest-2-weight: var(--weight-bold);
+  --text-prest-2-line-height: 30px;
+  --text-prest-2-letter-spacing: 0px;
+
+
+  --text-prest-3-size: 16px;
+  --text-prest-3-weight: var(--weight-bold);
+  --text-prest-3-line-height: 19px;
+  --text-prest-3-letter-spacing: 0.2px;
+
+
+  --text-prest-4-size: 15px;
+  --text-prest-4-weight: var(--weight-bold);
+  --text-prest-4-line-height: 19px;
+  --text-prest-4-letter-spacing: 2px;
+  --text-prest-4-weight-regular: var(--weight-regular);
+  --text-prest-4-line-height-regular: 24px;
+  --text-prest-4-letter-spacing-regular: 0px;
+
+  --text-prest-5-size: 14px;
+  --text-prest-5-weight: var(--weight-bold);
+  --text-prest-5-weight-semi-bold: var(--weight-semibold);
+  --text-prest-5-weight-regular: var(--weight-regular);
+  --text-prest-5-line-height: 18px;
+  --text-prest-5-line-height-semi-bold: 24px;
+  --text-prest-5-line-height-regular: 22px;
+  --text-prest-5-letter-spacing: 1.87px;
+  --text-prest-5-letter-spacing-semibold: 0.17px;
+  --text-prest-5-letter-spacing-regular: 0px;
+
+  /* Card */
+  --card-max-width: 412px;
+  --card-radius: 30px;
+  --card-radius-small: 15px;
+
+  /* Star */
+  --star-size-wrapper: 48px;
+  --star-size-wrapper-small: 40px;
+  --star-size: 16.75px;
+  --star-size-small: 14px;
+
+  /* Rating button */
+  --button-size: 51px;
+  --button-size-smal: 42px;
+  --button-height: 45px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-prest-4-size);
+  line-height: var(--text-prest-4-line-height-regular);
+  letter-spacing: var(--text-prest-4-letter-spacing-regular);
+  color: var(--gray-500);
+  background-color: var(--gray-950);
+}
+
+.content {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.card {
+  max-width: var(--card-max-width);
+  width: 100%;
+  padding: var(--spacing-300);
+  border-radius: var(--card-radius-small);
+  background: var(--gradient);
+}
+
+.rating-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-300);
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.rating-card[hidden] {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.star-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--star-size-wrapper-small);
+  height: var(--star-size-wrapper-small);
+  border-radius: 50%;
+  background-color: var(--gray-900);
+  flex-shrink: 0;
+}
+
+.star-wrapper svg {
+  width: var(--star-size-small);
+  height: var(--star-size-small);
+}
+
+.card__title {
+  font-size: var(--text-prest-2-size);
+  font-weight: var(--text-prest-2-weight);
+  line-height: var(--text-prest-2-line-height);
+  letter-spacing: var(--text-prest-2-letter-spacing);
+  color: var(--white);
+}
+
+.card__description {
+  font-size: var(--text-prest-5-size);
+  font-weight: var(--text-prest-5-weight-regular);
+  line-height: var(--text-prest-5-line-height-regular);
+  letter-spacing: var(--text-prest-5-letter-spacing-regular);
+  color: var(--gray-500);
+}
+
+.rating-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-200);
+}
+
+.rating-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--button-size-smal);
+  height: var(--button-size-smal);
+  font-size: var(--text-prest-5-size);
+  font-weight: var(--text-prest-5-weight);
+  line-height: var(--text-prest-5-line-height);
+  letter-spacing: var(--text-prest-5-letter-spacing);
+  color: var(--gray-500);
+  background-color: var(--gray-900);
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s, transform 0.15s;
+}
+
+.rating-btn:focus-visible {
+  outline: 3px solid var(--orange-500);
+  outline-offset: 3px;
+}
+
+.rating-btn:active {
+  transform: scale(0.92);
+}
+
+.rating-btn[aria-pressed="true"] {
+  background-color: var(--white);
+  color: var(--gray-950);
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: var(--button-height);
+  height: 100%;
+  padding: var(--spacing-200) var(--spacing-100);
+  font-size: var(--text-prest-5-size);
+  font-weight: var(--text-prest-5-weight);
+  line-height: var(--text-prest-5-letter-spacing);
+  letter-spacing: var(--text-prest-5-letter-spacing);
+  text-transform: uppercase;
+  color: var(--gray-950);
+  background-color: var(--orange-500);
+  border-radius: 22.5px;
+  transition: background-color 0.2s ease, transform 0.2s;
+}
+
+.submit-btn:focus-visible {
+  outline: 3px solid var(--orange-500);
+  outline-offset: 3px;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+.submit-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.thankyou-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: var(--spacing-300);
+  padding: var(--spacing-400) var(--spacing-300);
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.thankyou-card[hidden] {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.thankyou-image {
+  width: 144px;
+  height: 96px;
+  margin-bottom: 0;
+}
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0 var(--spacing-200);
+  font-size: var(--text-prest-5-size);
+  font-weight: var(--text-prest-5-weight-regular);
+  line-height: var(--text-prest-5-line-height-regular);
+  letter-spacing: var(--text-prest-5-letter-spacing-regular);
+  color: var(--orange-500);
+  background-color: var(--gray-900);
+  border-radius: 22.5px;
+}
+
+@media (hover: hover) {
+  .rating-btn:hover {
+    background-color: var(--orange-500);
+    color: var(--gray-950);
+  }
+
+  .submit-btn:hover {
+    background-color: var(--white);
+  }
+}
+
+@media (min-width: 768px) {
+  .rating-card {
+    padding-block: var(--spacing-400);
+    gap: var(--spacing-400);
+  }
+
+  .star-wrapper {
+    width: var(--star-size-wrapper);
+    height: var(--star-size-wrapper);
+  }
+
+  .star-wrapper svg {
+    width: var(--star-size);
+    height: var(--star-size);
+  }
+
+  .card__title {
+    font-size: var(--text-prest-1-size);
+    font-weight: var(--text-prest-1-weight);
+    line-height: var(--text-prest-1-line-height);
+    letter-spacing: var(--text-prest-1-letter-spacing);
+  }
+
+  .card__description {
+    font-size: var(--text-prest-4-size);
+    font-weight: var(--text-prest-4-weight-regular);
+    line-height: var(--text-prest-4-line-height-regular);
+    letter-spacing: var(--text-prest-4-letter-spacing-regular);
+  }
+
+  .rating-btn {
+    width: var(--button-size);
+    height: var(--button-size);
+    font-size: var(--text-prest-3-size);
+    font-weight: var(--text-prest-3-weight);
+    letter-spacing: var(--text-prest-3-letter-spacing);
+    line-height: var(--text-prest-3-line-height);
+  }
+
+  .submit-btn {
+    font-weight: var(--text-prest-5-weight-semi-bold);
+    line-height: var(--text-prest-5-line-height-semi-bold);
+    letter-spacing: var(--text-prest-5-letter-spacing-semibold);
+  }
+
+  .thankyou-card {
+    padding: var(--spacing-500) var(--spacing-400);
+    gap: var(--spacing-400);
+  }
+
+  .thankyou-image {
+    width: 162px;
+    height: 108px;
+  }
+}
